@@ -1,24 +1,17 @@
 const { Schema, model } = require('mongoose');
 
-const matchupSchema = new Schema({
-  tech1: {
+const payment_typeSchema = new Schema({
+  name: {
     type: String,
     required: true,
+    maxLength: 15,
   },
-  tech2: {
-    type: String,
-    required: true,
-  },
-  tech1_votes: {
-    type: Number,
-    default: 0,
-  },
-  tech2_votes: {
-    type: Number,
-    default: 0,
-  },
+  lifeForm: {
+    type: Schema.Types.ObjectId,
+    ref: 'lifeForm',
+  }
 });
 
-const Matchup = model('Matchup', matchupSchema);
+const payment_type = model('payment_type', payment_typeSchema);
 
-module.exports = Matchup;
+module.exports = payment_type;
