@@ -1,27 +1,57 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type Tech {
+  type lifeForm {
+    _id: ID!
+    first_name: String!
+    last_name: String!
+    email: String!
+    password: String!
+    home_planet: String!
+  }
+
+  type categories {
     _id: ID!
     name: String!
   }
 
-  type Matchup {
+  type gen_merch {
     _id: ID!
-    tech1: String!
-    tech2: String!
-    tech1_votes: Int
-    tech2_votes: Int
+    item_name: String!
+    description: String!
+    price: Number!
+    category: [category]
+  }
+
+  type real_estate {
+    _id: ID!
+    item_name: String!
+    item_description: String!
+    item_price: Number!
+    category: [category]
+  }
+
+  type travel {
+    _id: ID!
+    package_name: String!
+    description: String!
+    price: Number!
+    category: [category]
+  }
+
+  type payment_type {
+    _id: ID!
+    name: String!
+    lifeForm: [lifeForm]
   }
 
   type Query {
-    tech: [Tech]
-    matchups(_id: String): [Matchup]
-  }
-
-  type Mutation {
-    createMatchup(tech1: String!, tech2: String!): Matchup
-    createVote(_id: String!, techNum: Int!): Matchup
+    lifeForms: [lifeForm]
+    categories: [categories]
+    gen_merch: [gen_merch]
+    real_estate: [real_estate]
+    travel: [travel]
+    payment_types: [payment_type]
   }
 `;
 
