@@ -27,7 +27,10 @@ const lifeFormSchema = new Schema(
       required: true,
     },
     // set savedBooks to be an array of data that adheres to the bookSchema
-    savedBooks: [bookSchema],
+    home_planet: {
+      type: String,
+      required: true,
+    },
   },
   // set this to use virtual below
   {
