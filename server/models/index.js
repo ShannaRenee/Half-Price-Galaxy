@@ -1,4 +1,9 @@
-const Tech = require('./Tech');
-const Matchup = require('./Matchup');
+const lifeForm = require('./lifeForm');
+const payment_type = require('./paymentType');
+const category = require('./categories');
+const gen_merch = require('./genMerch');
+const real_estate = require('./realEstate');
+const travel = require('./travel');
 
-module.exports = { Tech, Matchup };
+
+module.exports = { lifeForm, payment_type, category, gen_merch, real_estate, travel };
