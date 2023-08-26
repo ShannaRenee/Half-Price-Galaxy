@@ -1,4 +1,4 @@
-const lifeForm = require('./lifeForm');
+const lifeForm = require('./lifeForms');
 const payment_type = require('./paymentType');
 const category = require('./categories');
 const gen_merch = require('./genMerch');

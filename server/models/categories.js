@@ -8,6 +8,6 @@ const categorySchema = new Schema({
   },
 });
 
-const categories = model('catagories', categorySchema);
+const categories = model('categories', categorySchema);
 
 module.exports = categories;
