@@ -1,0 +1,26 @@
+[
+  {
+    "id":1,"email":"zoidberg12@goigarmail.com","first name": "John","last name":"Zoidberg","password":"$2a$1","home planet":"Decapod 10"
+  },
+  {
+    "id":2,"email":"binkies.jar@goigarmail.com","first name": "Jar Jar","last name":"Binks","password":"$2asaghgp1","home planet":"Naboo"
+  },
+  {
+    "id":3,"email":"i.am.yummy@goigarmail.com","first name": "Yumyulack","last name":"Opposites","password":"$2a$sdsgvv1","home planet":"Shlorp"
+  },
+  {
+    "id":4,"email":"alf.loves.cats@goigarmail.com","first name": "Alf","last name":"Shumway","password":"$45a$1","home planet":"Melmac"
+  },
+  {
+    "id":5,"email":"rogeispretty@outterspacelook.com","first name": "Roger","last name":"Smith","password":"$2dwqk1","home planet":"Earth"
+  },
+  {
+    "id":6,"email":"that.dude.abduub@outterspacelook.com","first name": "Abduub","last name":"Dubard","password":"$2dsbjkb","home planet":"Mars"
+  },
+  {
+    "id":7,"email":"warlord.overload@outterspacelook.com","first name": "Dominus","last name":"Ghaul","password":"$2cksmkjlab1","home planet":"Mars"
+  },
+  {
+    "id":8,"email":"aqua.lish.man2@goigarmail.com","first name": "Ponda","last name":"Baba","password":"$2csdmj1","home planet":"Ando"
+  }
+]
