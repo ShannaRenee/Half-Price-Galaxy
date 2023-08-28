@@ -21,24 +21,24 @@ const typeDefs = gql`
     _id: ID!
     item_name: String!
     description: String!
-    price: Number!
-    category: [category]
+    price: String!
+    categories: [categories]
   }
 
   type real_estate {
     _id: ID!
     item_name: String!
     item_description: String!
-    item_price: Number!
-    category: [category]
+    item_price: String!
+    categories: [categories]
   }
 
   type travel {
     _id: ID!
     package_name: String!
     description: String!
-    price: Number!
-    category: [category]
+    price: String!
+    categories: [categories]
   }
 
   type payment_type {
@@ -48,12 +48,12 @@ const typeDefs = gql`
   }
 
   type Query {
-    lifeForms: [lifeForm]
+    lifeForm: [lifeForm]
     categories: [categories]
     gen_merch: [gen_merch]
     real_estate: [real_estate]
     travel: [travel]
-    payment_types: [payment_type]
+    payment_type: [payment_type]
   }
 `;
 

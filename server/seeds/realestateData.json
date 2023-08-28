@@ -1,26 +1,26 @@
 [
    {
-    "id":1,"category id":1,"description":"4 bedrooms, 2 bathrooms, 1 splorgon piece of land, located on Mars","price":"30,000 Zorpians"
+    "id":1,"categories id":1,"description":"4 bedrooms, 2 bathrooms, 1 splorgon piece of land, located on Mars","price":"30,000 Zorpians"
    },
    {
-    "id":2,"category id":1,"description":"5 bedrooms, 4,5 bathrooms, 1.5 splorgon piece of land, located on Gorgania","price":"140,000 Zorpians"
+    "id":2,"categories id":1,"description":"5 bedrooms, 4,5 bathrooms, 1.5 splorgon piece of land, located on Gorgania","price":"140,000 Zorpians"
    },
    {
-    "id":3,"category id":1,"description":"10 bedrooms, 6 bathrooms, 3 splorgons piece of land, located on Jupiter","price":"1,200,000 Zorpians"
+    "id":3,"categories id":1,"description":"10 bedrooms, 6 bathrooms, 3 splorgons piece of land, located on Jupiter","price":"1,200,000 Zorpians"
    },
    {
-    "id":4,"category id":1,"description":"1 bedroom, 1 bathroom, .5 splorgon piece of land, located on Earth","price":"2,000,000 Zorpians"
+    "id":4,"categories id":1,"description":"1 bedroom, 1 bathroom, .5 splorgon piece of land, located on Earth","price":"2,000,000 Zorpians"
    },
    {
-    "id":5,"category id":1,"description":"3 bedrooms, 2 bathrooms, 2 splorgons piece of land, located on Melmac","price":"57,000 Zorpians"
+    "id":5,"categories id":1,"description":"3 bedrooms, 2 bathrooms, 2 splorgons piece of land, located on Melmac","price":"57,000 Zorpians"
    },
    {
-    "id":6,"category id":1,"description":"2 bedrooms, 2 bathrooms, 5 splorgon piece of land, located on Naboo","price":"125,000 Zorpians"
+    "id":6,"categories id":1,"description":"2 bedrooms, 2 bathrooms, 5 splorgon piece of land, located on Naboo","price":"125,000 Zorpians"
    },
    {
-    "id":7,"category id":1,"description":"3 bedrooms, 1 bathroom, 2.5 splorgon piece of land, located on Slorp","price":"98,000 Zorpians"
+    "id":7,"categories id":1,"description":"3 bedrooms, 1 bathroom, 2.5 splorgon piece of land, located on Slorp","price":"98,000 Zorpians"
    },
    {
-    "id":7,"category id":1,"description":"1 bedroom, 2.5 bathrooms, 10 splorgon piece of land, located on Ando","price":"65,000 Zorpians"
+    "id":7,"categories id":1,"description":"1 bedroom, 2.5 bathrooms, 10 splorgon piece of land, located on Ando","price":"65,000 Zorpians"
    }
 ]
