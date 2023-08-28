@@ -1,26 +1,26 @@
 [
     {
-        "id": "1", "category id": "2", "item name": "The Klorpian Mark 3", "despription": "Space gun with all the bells and whistles to keep your home safe from other life forms!", "price": "5,000 Zorpians"
+        "id": "1", "categories id": "2", "item name": "The Klorpian Mark 3", "despription": "Space gun with all the bells and whistles to keep your home safe from other life forms!", "price": "5,000 Zorpians"
     },
     {
-        "id": "2", "category id": "2", "item name": "Splognoir", "despription": "Fastest spaceship there is!!!!! Get from Abdoornia to Tolotunor in minutes!", "price": "3,000,000 Zorpians"
+        "id": "2", "categories id": "2", "item name": "Splognoir", "despription": "Fastest spaceship there is!!!!! Get from Abdoornia to Tolotunor in minutes!", "price": "3,000,000 Zorpians"
     },
     {
-        "id": "3", "category id": "2", "item name": "Globaria", "despription": "Cook with the globaria. It will give your food much more flavor! ", "price": "30 Zorpians"
+        "id": "3", "categories id": "2", "item name": "Globaria", "despription": "Cook with the globaria. It will give your food much more flavor! ", "price": "30 Zorpians"
     },
     {
-        "id": "4", "category id": "2", "item name": "Stow Away Flork", "despription": "This will help to hide your flork so no one has to see it when they come over! ", "price": "35 Zorpians"
+        "id": "4", "categories id": "2", "item name": "Stow Away Flork", "despription": "This will help to hide your flork so no one has to see it when they come over! ", "price": "35 Zorpians"
     },
     {
-        "id": "5", "category id": "2", "item name": "Meruta suite", "despription": "Want to travel to Earth but don't want to breath their toxic smelly air? Wear a Meruta! It can help protect from the worst of all ozones.", "price": "100 Zorpians"
+        "id": "5", "categories id": "2", "item name": "Meruta suite", "despription": "Want to travel to Earth but don't want to breath their toxic smelly air? Wear a Meruta! It can help protect from the worst of all ozones.", "price": "100 Zorpians"
     },
     {
-        "id": "6", "category id": "2", "item name": "Cothorix", "despription": "Have replican lifeforms that bring in germs? You can keep your home cleaner than ever before by disinfecting with Cothorix.", "price": "12 Zorpians"
+        "id": "6", "categories id": "2", "item name": "Cothorix", "despription": "Have replican lifeforms that bring in germs? You can keep your home cleaner than ever before by disinfecting with Cothorix.", "price": "12 Zorpians"
     },
     {
-        "id": "7", "category id": "2", "item name": "Igolla Q9", "despription": "Never drop a call to Jupiter again using our new and advanced technology with the Igolla Q9!", "price": "5,000 Zorpians"
+        "id": "7", "categories id": "2", "item name": "Igolla Q9", "despription": "Never drop a call to Jupiter again using our new and advanced technology with the Igolla Q9!", "price": "5,000 Zorpians"
     },
     {
-        "id": "8", "category id": "2", "item name": "Zigowaapa", "despription": "Keep warm on any planet with the Zigowaapa jacket that uses insolation straight from the stars!", "price": "99 Zorpians"
+        "id": "8", "categories id": "2", "item name": "Zigowaapa", "despription": "Keep warm on any planet with the Zigowaapa jacket that uses insolation straight from the stars!", "price": "99 Zorpians"
     }
 ]

@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const categorySchema = new Schema({
+const categoriesSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -8,6 +8,6 @@ const categorySchema = new Schema({
   },
 });
 
-const categories = model('categories', categorySchema);
+const categories = model('categories', categoriesSchema);
 
 module.exports = categories;
