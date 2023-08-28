@@ -22,7 +22,7 @@ const typeDefs = gql`
     item_name: String
     description: String
     price: String
-    category: [categories]
+    categories: [categories]
   }
 
   type real_estate {
@@ -30,7 +30,7 @@ const typeDefs = gql`
     item_name: String
     item_description: String
     item_price: String
-    category: [categories]
+    categories: [categories]
   }
 
   type travel {
@@ -38,7 +38,7 @@ const typeDefs = gql`
     package_name: String
     description: String
     price: String
-    category: [categories]
+    categories: [categories]
   }
 
   type payment_type {
