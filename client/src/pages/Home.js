@@ -15,7 +15,7 @@ const Home = () => {
         <h1>👽 Welcome to Half Price Galaxy   </h1><button className='btn btn-small btn-danger'>Login</button>
       </div>
       <div className="card-body m-5">
-        <h2>Place holder</h2>
+        <h2 className=' text-center fs-bold'>The one stop market for all you interstellar needs!</h2>
         {loading ? (
           <div>Thrusters warming....</div>
         ) : (
@@ -33,21 +33,22 @@ const Home = () => {
         )}
       </div>
       <div className="card-footer text-center m-3">
-        <h2>Take a gander at some prime interstellar realestate.</h2>
-        <Link to="/realestate">
-          <button className="btn btn-lg btn-danger">Ready to start your adventure?</button>
-        </Link>
+        <image 
+          src={require(`../../assets/imgs/market.jpg`)}
+          className='home-image'
+          alt='market'
+        />
       </div>
       <div className="card-footer text-center m-3">
         <h2>Want some stuff look no further!</h2>
         <Link to="/realestate">
-          <button className="btn btn-lg btn-danger">Ready to start your adventure?</button>
+          <button className="btn btn-small btn-danger">Ready to start your adventure?</button>
         </Link>
       </div>
       <div className="card-footer text-center m-3">
         <h2>Want to get out off your dusty old planet? Click me!</h2>
         <Link to="/realestate">
-          <button className="btn btn-lg btn-danger">Ready to start your adventure?</button>
+          <button className="btn btn-small btn-danger">Ready to start your adventure?</button>
         </Link>
       </div>
     </div>
