@@ -11,12 +11,12 @@ const travelSchema = new Schema({
     required: true,
     },
   price: {
-    type: Number,
+    type: String,
     required: true,
     },
-  category: {
+  categories: {
     type: Schema.Types.ObjectId,
-    ref: 'category',
+    ref: 'categories',
   }
 });
 

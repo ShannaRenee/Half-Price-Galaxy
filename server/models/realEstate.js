@@ -11,12 +11,12 @@ const real_estateSchema = new Schema({
     required: true,
   },
   item_price: {
-    type: Number,
+    type: String,
     required: true,
   },
-  category: {
+  categories: {
     type: Schema.Types.ObjectId,
-    ref: 'category',
+    ref: 'categories',
   },
 });
 
