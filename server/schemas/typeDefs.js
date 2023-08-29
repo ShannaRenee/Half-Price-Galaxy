@@ -55,6 +55,10 @@ const typeDefs = gql`
     travel: [travel]
     payment_type: [payment_type]
   }
+
+  type Mutation {
+    addLifeForm(first_name: String!, last_name: String!, email: String!, password: String!, home_planet: String!): lifeForm
+  }
 `;
 
 module.exports = typeDefs;
