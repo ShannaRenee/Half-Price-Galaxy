@@ -22,7 +22,30 @@ const resolvers = {
     payment_type: async () => {
       return await payment_type.find({}).populate('lifeForm');
     },
-  }
+  },
+
+  Mutation: {
+    addLifeForm: async (parent, { first_name, last_name, email, password, home_planet }) => {
+      return await lifeForm.create({ first_name, last_name, email, password, home_planet });
+    },
+
+    // THESE ARE NICE TO HAVE BUT NOT NECESSARY FOR MVP - these will not be the focus in anyway!
+    // addCategory: async (parent, { name }) => {
+    //   return await categories.create({ name });
+    // },
+    // addGenMerch: async (parent, { item_name, description, price, categories }) => {
+    //   return await gen_merch.create({ item_name, description, price, categories });
+    // },
+    // addRealEstate: async (parent, { item_name, item_description, item_price, categories }) => {
+    //   return await real_estate.create({ item_name, item_description, item_price, categories });
+    // },
+    // addTravel: async (parent, { package_name, description, price, categories }) => {
+    //   return await travel.create({ package_name, description, price, categories });
+    // },
+    // addPaymentType: async (parent, { name, lifeForm }) => {
+    //   return await payment_type.create({ name, lifeForm });
+    // },
+  },
 };
 
 module.exports = resolvers;
