@@ -15,7 +15,7 @@ const Home = () => {
         <h1>👽 Welcome to Half Price Galaxy   </h1><button className='btn btn-small btn-danger'>Login</button>
       </div>
       <div className="card-body m-5">
-        <h2>  </h2>
+        <h2>Place holder</h2>
         {loading ? (
           <div>Thrusters warming....</div>
         ) : (
