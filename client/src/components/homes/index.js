@@ -23,3 +23,6 @@ const Homes = ({homes}) => {
         </div>
             );
 };
+
+export default Homes;
+
