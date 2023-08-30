@@ -54,3 +54,19 @@ export const homes = [
         description: "The view from this house is breath taking! The wildlife is amazing.  You will love it here.  The house is a little small, but it is a great starter home."
     }
 ];
+
+export const homePages = [
+    {
+        name: "Market",
+        description: 'Want some stuff look no further!'
+    },
+    {
+        name: "Real Estate",
+        description: 'Finally ready to your dream home?'
+    },
+    {
+        name: "Travel",
+        description: 'Want to get out off your dusty old planet?'
+    }
+];
+
