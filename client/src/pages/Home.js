@@ -11,8 +11,8 @@ const Home = () => {
         <button className="btn btn-small btn-danger">Login</button>
       </div>
       <div className="card-body">
-        {homePages.map((homePage, i) => (
-          <HomePage key={homePage.name} homePage={homePage} />
+        {homePages.map((homePage) => (
+          <HomePage key={homePage.name} homePages={homePage} />
         ))}
       </div>
     </div>

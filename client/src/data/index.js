@@ -57,7 +57,7 @@ export const homes = [
 
 export const homePages = [
     {
-        name: "Market",
+        name: "market",
         description: 'Want some stuff look no further!'
     },
     {
@@ -65,7 +65,7 @@ export const homePages = [
         description: 'Finally ready to your dream home?'
     },
     {
-        name: "Travel",
+        name: "travel",
         description: 'Want to get out off your dusty old planet?'
     }
 ];
