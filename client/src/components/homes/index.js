@@ -25,3 +25,4 @@ const Homes = ({homes}) => {
 };
 
 export default Homes;
+
