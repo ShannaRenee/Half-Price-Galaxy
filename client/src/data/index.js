@@ -1,30 +1,30 @@
 export const homes = [
     {
         name: "Spacious Home",
-        planet: "Gorgania",
+        planet: "Planet: Gorgania",
         bedrooms: "4 bedrooms",
         bathrooms: "2 bathrooms",
         price: "$1,000,000 Zorpians",
-        splorgons: "12",
+        splorgons: "12 splorgons",
         description: "Beautiful home on the edge of the galaxy.  Lots of space for a large family with replicans or a single lifeform. You can see the entire galaxy from the back porch!"
     },
     {
         name: "On Edge of Galaxy Home",
-        planet: "Naboo",
+        planet: "Planet: Naboo",
         bedrooms: "2 bedrooms",
         bathrooms: "1 bathroom",
         price: "$500,000 Zorpians",
-        splorgons: "1",
+        splorgons: "1 splorgons",
         description: "Quaint little home on the edge of the galaxy.  Great for a small family or a single lifeform."
     },
     {
         name: "Utopia Home",
-        planet: "Shlorp",
+        planet: "Planet: Shlorp",
         bedrooms: "3 bedrooms",
         bathrooms: "2 bathrooms",
         price: "$750,000 Zorpians",
-        splorgons: "2.5",
-        description: "This gorgous home will be suitable for you and your replicans to live in your own little utipoia.  The home is located in a quiet neighborhood with a great school system."
+        splorgons: "2.5 splorgons",
+        description: "This gorgous home will be suitable for you and your replicans to live in your own little utipoia.  The home is located in a quiet neighborhood with a great school system..... UPDATED DESCRIPTION: This home is no longer availible due to the fact that the planet has been destroyed by a black hole.  Sorry for the inconvenience."
     },
     {
         name: "Simple Home",
@@ -32,7 +32,7 @@ export const homes = [
         bedrooms: "5 bedrooms",
         bathrooms: "3 bathrooms",
         price: "$2,500,000 Zorpians",
-        splorgons: "3",
+        splorgons: "3 splorgons",
         description: "This home is located in a great neighborhood with a great school system.  It is a great place to raise your replicans. Little to no crime and everyone is friendly."
     },
     {
@@ -41,7 +41,7 @@ export const homes = [
         bedrooms: "1 bedrooms",
         bathrooms: "1 bathroom",
         price: "$250,000 Zorpians",
-        splorgons: "1",
+        splorgons: "1 splorgons",
         descript: "I don't know why you would want to live here.  It is a dump.  But if you are looking for a cheap place to live, this is it.  It is a fixer-upper."
     },
     {
@@ -50,7 +50,7 @@ export const homes = [
         bedrooms: "2 bedrooms",
         bathrooms: "1 bathroom",
         price: "$900,000 Zorpians",
-        splorgons: "7",
+        splorgons: "7 splorgons",
         description: "The view from this house is breath taking! The wildlife is amazing.  You will love it here.  The house is a little small, but it is a great starter home."
     }
 ];
