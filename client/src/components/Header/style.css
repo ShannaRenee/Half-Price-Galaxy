@@ -1,0 +1,35 @@
+header {
+	height: 200px;
+	position: relative;
+	z-index: 2;
+}
+
+.scaledLogo {
+	position: absolute;
+	width: 50%;
+	object-fit: scale-down;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: auto;
+	right: auto;
+}
+
+header img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+
+header h1 {
+	letter-spacing: 0.2rem;
+	font-size: 5rem;
+	position: relative;
+	color: var(--light);
+	text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
