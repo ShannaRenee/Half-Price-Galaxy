@@ -10,7 +10,7 @@ const Home = () => {
         <h1>👽 Welcome to Half Price Galaxy </h1>
         <button className="btn btn-small btn-danger">Login</button>
       </div>
-      <div className="card-body">
+      <div className="card-body bg-black d-flex  justify-content-center ">
         {homePages.map((homePage) => (
           <HomePage key={homePage.name} homePages={homePage} />
         ))}
