@@ -42,7 +42,7 @@ const Login = () => {
   };
 
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center vh-100">
+    <div className="d-flex flex-column align-items-center justify-content-center vh-100 bg-darker">
       <div className="dropdown mb-3 me-3 bd-mode-toggle">
       </div>
 
@@ -68,10 +68,10 @@ const Login = () => {
               </span>
             </label>
           </div>
-          <button className="btn btn-danger w-100 py-2" type="submit">
+          <button className="btn btn-danger w-25 py-2" type="submit">
             Sign in
           </button>
-          <p className="mt-5 mb-3 text-body-secondary">&copy; 9285156MR-1856146MR</p>
+          <p className="mt-5 mb-3 text-body-secondary">&copy; 99845sR-122354sR</p>
         </form>
       </div>
     </div>
