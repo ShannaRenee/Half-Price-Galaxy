@@ -35,7 +35,7 @@ const typeDefs = gql`
 
   type travel {
     _id: ID
-    package_name: String
+    packageName: String
     description: String
     price: String
     categories: [categories]
