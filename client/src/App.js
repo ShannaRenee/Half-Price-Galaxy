@@ -6,6 +6,7 @@ import Matchup from './pages/Matchup';
 import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
 import RealEstate from './pages/realEstate';
+import Travel from './pages/travel';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -37,6 +38,10 @@ function App() {
             <Route
               path="/realEstate"
               element={<RealEstate />}
+            />
+            <Route
+              path="/travel"
+              element={<Travel />}
             />
           </Routes>
         </div>

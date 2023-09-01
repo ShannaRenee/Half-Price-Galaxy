@@ -70,3 +70,11 @@ export const homePages = [
     }
 ];
 
+export const locations = [
+    {
+        package_name:"The Ednaria Package",
+        description: "A weekend get away from all lifeforms to Abaroo with gorgeous views in a quaint coattage on 2 splorgons of land.",
+        price:
+    }
+]
+
