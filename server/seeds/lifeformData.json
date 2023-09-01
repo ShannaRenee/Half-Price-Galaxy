@@ -1,26 +1,26 @@
 [
   {
-    "id":1,"email":"zoidberg12@goigarmail.com","first name": "John","last name":"Zoidberg","password":"$2a$1","home planet":"Decapod 10"
+    "id":1,"email":"zoidberg12@goigarmail.com","first_name": "John","last_name":"Zoidberg","password":"$2a$1","home_planet":"Decapod 10"
   },
   {
-    "id":2,"email":"binkies.jar@goigarmail.com","first name": "Jar Jar","last name":"Binks","password":"$2asaghgp1","home planet":"Naboo"
+    "id":2,"email":"binkies.jar@goigarmail.com","first_name": "Jar Jar","last_name":"Binks","password":"$2asaghgp1","home_planet":"Naboo"
   },
   {
-    "id":3,"email":"i.am.yummy@goigarmail.com","first name": "Yumyulack","last name":"Opposites","password":"$2a$sdsgvv1","home planet":"Shlorp"
+    "id":3,"email":"i.am.yummy@goigarmail.com","first_name": "Yumyulack","last_name":"Opposites","password":"$2a$sdsgvv1","home_planet":"Shlorp"
   },
   {
-    "id":4,"email":"alf.loves.cats@goigarmail.com","first name": "Alf","last name":"Shumway","password":"$45a$1","home planet":"Melmac"
+    "id":4,"email":"alf.loves.cats@goigarmail.com","first_name": "Alf","last_name":"Shumway","password":"$45a$1","home_planet":"Melmac"
   },
   {
-    "id":5,"email":"rogeispretty@outterspacelook.com","first name": "Roger","last name":"Smith","password":"$2dwqk1","home planet":"Unknown"
+    "id":5,"email":"rogeispretty@outterspacelook.com","first_name": "Roger","last_name":"Smith","password":"$2dwqk1","home_planet":"Unknown"
   },
   {
-    "id":6,"email":"that.dude.abduub@outterspacelook.com","first name": "Abduub","last name":"Dubard","password":"$2dsbjkb","home planet":"Mars"
+    "id":6,"email":"that.dude.abduub@outterspacelook.com","first_name": "Abduub","last_name":"Dubard","password":"$2dsbjkb","home_planet":"Mars"
   },
   {
-    "id":7,"email":"warlord.overload@outterspacelook.com","first name": "Dominus","last name":"Ghaul","password":"$2cksmkjlab1","home planet":"Mars"
+    "id":7,"email":"warlord.overload@outterspacelook.com","first_name": "Dominus","last_name":"Ghaul","password":"$2cksmkjlab1","home_planet":"Mars"
   },
   {
-    "id":8,"email":"aqua.lish.man2@goigarmail.com","first name": "Ponda","last name":"Baba","password":"$2csdmj1","home planet":"Ando"
+    "id":8,"email":"aqua.lish.man2@goigarmail.com","first_name": "Ponda","last_name":"Baba","password":"$2csdmj1","home_planet":"Ando"
   }
 ]
