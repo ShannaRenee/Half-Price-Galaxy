@@ -67,7 +67,7 @@ export const QUERY_TRAVEL = gql`
 query travel {
   travel {
     _id
-    package_name
+    packageName
     description
     price
     categories {
