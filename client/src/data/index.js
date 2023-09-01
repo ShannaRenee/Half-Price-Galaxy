@@ -28,7 +28,7 @@ export const homes = [
     },
     {
         name: "Simple Home",
-        planet: "Earth",
+        planet: "Planet: Earth",
         bedrooms: "5 bedrooms",
         bathrooms: "3 bathrooms",
         price: "$2,500,000 Zorpians",
@@ -37,7 +37,7 @@ export const homes = [
     },
     {
         name: "Tiny Home",
-        planet: "Ando",
+        planet: "Planet: Ando",
         bedrooms: "1 bedrooms",
         bathrooms: "1 bathroom",
         price: "$250,000 Zorpians",
@@ -46,7 +46,7 @@ export const homes = [
     },
     {
         name: "Great View Home",
-        planet: "Kamino",
+        planet: "Planet: Kamino",
         bedrooms: "2 bedrooms",
         bathrooms: "1 bathroom",
         price: "$900,000 Zorpians",

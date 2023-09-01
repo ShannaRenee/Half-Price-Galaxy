@@ -3,7 +3,8 @@ import "./style.css";
 
 const Homes = ({homes}) => {
     return (
-        <div class="card">
+        <div className="col">
+            <div class="card h-100">
             <img 
             src={require(`../../../assets/imgs/${homes.name}.jpg`)} 
             class="card-img-top" 
@@ -20,6 +21,7 @@ const Homes = ({homes}) => {
                 <li class="list-group-item">{homes.splorgons}</li>
                 <li class="list-group-item">{homes.price}</li>
             </ul>
+        </div>
         </div>
             );
 };
