@@ -6,16 +6,16 @@ const real_estateSchema = new Schema({
     required: true,
     maxLength: 60,
   },
-  item_description: {
+  description: {
     type: String,
     required: true,
   },
-  item_price: {
+  price: {
     type: String,
     required: true,
   },
-  categories: {
-    type: Schema.Types.ObjectId,
+  categories_id: {
+    type: Schema.Types.String,
     ref: 'categories',
   },
 });

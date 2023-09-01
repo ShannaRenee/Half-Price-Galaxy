@@ -99,7 +99,7 @@ export const locations = [
     {
         packageName:"The Quintonias Package",
         description: "Trip to and from Dagoban for 2. Go visit this beautiful swamp-covered planet and gain some extra wisdom!",
-        price:"77,000 Zorpians"
+        price:"5,000 Zorpians"
     },
     {
         packageName:"The Aebos Package",
