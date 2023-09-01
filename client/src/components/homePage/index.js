@@ -9,7 +9,7 @@ const HomePage = ({homePages}) => {
             class="card-img-top"
             alt={homePages.name}
             />
-            <div class="card-body">
+            <div class="card-body bg-danger w-100">
                 <h5 class="card-title">{homePages.name}</h5>
                 <p class="card-text">{homePages.description}</p>
             </div>
