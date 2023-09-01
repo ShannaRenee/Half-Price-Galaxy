@@ -7,8 +7,8 @@ import './style.css';
 const Header = ({ pages, currentPage, setCurrentPage }) => {
 	return (
 		<header className="container-fluid">
-			<img src={headerImg} alt="space"/>
-			<div className="container d-lg-flex justify-content-lg-between py-3">
+			<img className="junkityjunk" src={headerImg} alt="space"/>
+			<div className="container d-flex justify-content-lg-between py-3">
 				<img className='scaledLogo' src={logoImg} alt="logo"/>
 				<Nav
 					pages={pages}
