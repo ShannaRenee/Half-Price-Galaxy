@@ -42,42 +42,37 @@ const Login = () => {
   };
 
   return (
-    <div className="card bg-white card-rounded w-25">
-      <div className="card-header bg-dark text-center">
-        <h1>Let's create a matchup!</h1>
+    <div className="d-flex flex-column align-items-center justify-content-center vh-100">
+      <div className="dropdown mb-3 me-3 bd-mode-toggle">
+        {/* ... dropdown code ... */}
       </div>
-      <div className="card-body m-5">
-        {loading ? (
-          <div>Loading...</div>
-        ) : (
-          <form onSubmit={handleFormSubmit}>
-            <label>Tech 1: </label>
-            <select name="tech1" onChange={handleInputChange}>
-              {techList.map((tech) => {
-                return (
-                  <option key={tech._id} value={tech.name}>
-                    {tech.name}
-                  </option>
-                );
-              })}
-            </select>
-            <label>Tech 2: </label>
-            <select name="tech2" onChange={handleInputChange}>
-              {techList.map((tech) => {
-                return (
-                  <option key={tech._id} value={tech.name}>
-                    {tech.name}
-                  </option>
-                );
-              })}
-            </select>
-            <button className="btn btn-danger" type="submit">
-              Create Matchup!
-            </button>
-          </form>
-        )}
+
+      <div className="form-signin">
+        <form className="w-100" onSubmit={handleFormSubmit}>
+          <img className="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" />
+          <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+
+          <div className="form-floating">
+            <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
+            <label htmlFor="floatingInput">Email address</label>
+          </div>
+          <div className="form-floating">
+            <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
+            <label htmlFor="floatingPassword">Password</label>
+          </div>
+
+          <div className="form-check text-start my-3">
+            <input className="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" />
+            <label className="form-check-label" htmlFor="flexCheckDefault">
+              Remember me
+            </label>
+          </div>
+          <button className="btn btn-danger w-100 py-2" type="submit">
+            Sign in
+          </button>
+          <p className="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
+        </form>
       </div>
-      {error && <div>Something went wrong...</div>}
     </div>
   );
 };
