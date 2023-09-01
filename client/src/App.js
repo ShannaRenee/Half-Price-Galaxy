@@ -7,7 +7,9 @@ import Login from './pages/Login';
 import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
 import RealEstate from './pages/realEstate';
+import Travel from './pages/travel';
 import Footer from './components/Footer';
+
 const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
@@ -46,6 +48,10 @@ function App() {
               <Route
                 path="/realEstate"
                 element={<RealEstate />}
+              />
+              <Route
+                path="/travel"
+                element={<Travel />}
               />
             </Routes>
           </div>

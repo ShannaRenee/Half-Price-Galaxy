@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const travelSchema = new Schema({
-  package_name: {
+  packageName: {
     type: String,
     required: true,
     maxLength: 60,
