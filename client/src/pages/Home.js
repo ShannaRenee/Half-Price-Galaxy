@@ -1,7 +1,6 @@
 import React from 'react';
 import { homePages } from '../data';
 import HomePage from '../components/homePage/';
-
 const Home = () => {
   console.log(homePages);
   return (
@@ -10,7 +9,7 @@ const Home = () => {
         <h1>👽 Welcome to Half Price Galaxy </h1>
         <button className="btn btn-small btn-danger">Login</button>
       </div>
-      <div className="card-body bg-black d-flex  justify-content-center ">
+      <div className="card-body">
         {homePages.map((homePage) => (
           <HomePage key={homePage.name} homePages={homePage} />
         ))}
@@ -18,5 +17,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;
