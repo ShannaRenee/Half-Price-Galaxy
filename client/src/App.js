@@ -3,19 +3,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Header from './components/Header';
 import Home from './pages/Home';
-import Matchup from './pages/Matchup';
+import Login from './pages/Login';
 import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
 import RealEstate from './pages/realEstate';
 import Footer from './components/Footer';
-
 const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
 });
-
 const pages = ['Home', 'realEstate'];
-
 function App() {
   const [currentPage, setCurrentPage] = useState('about');
   return (
@@ -30,19 +27,19 @@ function App() {
         <Router>
           <div className="flex-column justify-center align-center min-100-vh bg-primary">
             <Routes>
-              <Route 
-                path="/" 
+              <Route
+                path="/"
                 element={<Home />}
               />
-              <Route 
-                path="/matchup" 
-                element={<Matchup />}
+              <Route
+                path="/login"
+                element={<Login />}
               />
-              <Route 
-                path="/matchup/:id" 
+              <Route
+                path="/matchup/:id"
                 element={<Vote />}
               />
-              <Route 
+              <Route
                 path="*"
                 element={<NotFound />}
               />
@@ -59,5 +56,4 @@ function App() {
   </div>
   );
 }
-
 export default App;
