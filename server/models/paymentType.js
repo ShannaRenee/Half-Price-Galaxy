@@ -4,10 +4,10 @@ const payment_typeSchema = new Schema({
   name: {
     type: String,
     required: true,
-    maxLength: 15,
+    maxLength: 225,
   },
   lifeForm: {
-    type: Schema.Types.ObjectId,
+    type: Schema.Types.String,
     ref: 'lifeForm',
   }
 });

@@ -1,5 +1,5 @@
 const db = require('../config/connection');
-const { Lifeforms, Realestate, GenMerch, Travel, Categories, Payment } = require('../models'); //Links to User model
+const { lifeForm, real_estate, gen_merch, travel, categories, payment_type } = require('../models'); //Links to User model
 
 const lifeformData = require('./lifeformData.json'); //Links to userData.json
 const realestateData = require('./realestateData.json'); //Links to realestateData.json
@@ -9,14 +9,14 @@ const categoriesData = require('./categoriesData.json'); //Links to categoriesDa
 const paymentData = require('./paymentData.json'); //Links to paymentData.json
 
 db.once('open', async () => {
-  await User.deleteMany({});
+  await lifeForm.deleteMany({});
 
-  const Lifeforms = await User.insertMany(userData);
-  const Realestate = await User.insertMany(realestateData);
-  const GenMerch = await User.insertMany(genMerchData);
-  const Travel = await User.insertMany(travelData);
-  const Categories = await User.insertMany(categoriesData);
-  const Payment = await User.insertMany(paymentData);
+  const addlifeForm = await lifeForm.insertMany(lifeformData);
+  const addrealEstate = await real_estate.insertMany(realestateData);
+  const addgenMerch = await gen_merch.insertMany(genMerchData);
+  const addTravel = await travel.insertMany(travelData);
+  const addCategories = await categories.insertMany(categoriesData);
+  const addPaymentType = await payment_type.insertMany(paymentData);
 
   console.log('Data seeded!');
   process.exit(0);
