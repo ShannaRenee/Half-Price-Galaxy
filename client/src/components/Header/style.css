@@ -5,18 +5,18 @@ header {
 }
 
 .scaledLogo {
-	position: absolute;
-	width: 50%;
+	position: relative;
+	width: 60%;
 	object-fit: scale-down;
 	z-index: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	left: auto;
-	right: auto;
+	/* left: auto;
+	right: auto; */
 }
 
-header img {
+.junkityjunk {
 	position: absolute;
 	top: 0;
 	left: 0;
