@@ -14,9 +14,9 @@ const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
 });
-const pages = ['Home', 'realEstate'];
+const pages = ['realEstate', 'travel', 'Login', 'signup'];
 function App() {
-  const [currentPage, setCurrentPage] = useState('about');
+  const [currentPage, setCurrentPage] = useState('realEstate');
   return (
   <div className="wrapper">
     <Header

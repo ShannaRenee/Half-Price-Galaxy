@@ -5,16 +5,8 @@ const Footer = () => {
 	const icons = [
 		{
 			name: 'fab fa-github',
-			link: 'https://github.com',
-		},
-		{
-			name: 'fab fa-linkedin',
-			link: 'https://linkedin.com',
-		},
-		{
-			name: 'fab fa-stack-overflow',
-			link: 'https://stackoverflow.com',
-		},
+			link: 'https://github.com/ShannaRenee/Half-Price-Galaxy',
+		}
 	];
 	return (
 		<footer className="d-flex justify-content-center align-items-center">
