@@ -1,6 +1,7 @@
 import React from 'react';
 import "./style.css";
 const HomePage = ({homePages}) => {
+    console.log(homePages);
     return (
         <div class="card">
             <img

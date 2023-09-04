@@ -16,7 +16,7 @@ const client = new ApolloClient({
 });
 const pages = ['realEstate', 'travel', 'Login', 'signup'];
 function App() {
-  const [currentPage, setCurrentPage] = useState('about');
+  const [currentPage, setCurrentPage] = useState('realEstate');
   return (
   <div className="wrapper">
     <Header
