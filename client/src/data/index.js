@@ -113,3 +113,18 @@ export const locations = [
     }
 ]
 
+export const navnames = [
+    {
+        navname: "realestatenav.jpg",
+    },
+    {
+        navname: "travelnav.jpg",
+    },
+    {
+        navname: "loginnav.jpg",
+    },
+    {
+        navname: "signupnav.jpg",
+    }
+]
+
