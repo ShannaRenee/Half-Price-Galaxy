@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const travelSchema = new Schema({
-  package_name: {
+  packageName: {
     type: String,
     required: true,
     maxLength: 60,
@@ -14,8 +14,8 @@ const travelSchema = new Schema({
     type: String,
     required: true,
     },
-  categories: {
-    type: Schema.Types.ObjectId,
+  categories_id: {
+    type: Schema.Types.String,
     ref: 'categories',
   }
 });

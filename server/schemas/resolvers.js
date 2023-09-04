@@ -39,8 +39,8 @@ const resolvers = {
     // addRealEstate: async (parent, { item_name, item_description, item_price, categories }) => {
     //   return await real_estate.create({ item_name, item_description, item_price, categories });
     // },
-    // addTravel: async (parent, { package_name, description, price, categories }) => {
-    //   return await travel.create({ package_name, description, price, categories });
+    // addTravel: async (parent, { packageName, description, price, categories }) => {
+    //   return await travel.create({ packageName, description, price, categories });
     // },
     // addPaymentType: async (parent, { name, lifeForm }) => {
     //   return await payment_type.create({ name, lifeForm });

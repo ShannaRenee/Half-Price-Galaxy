@@ -70,3 +70,46 @@ export const homePages = [
     }
 ];
 
+export const locations = [
+    {
+        packageName:"The Ednaria Package",
+        description: "A weekend get away from all lifeforms to Abaroo with gorgeous views in a quaint coattage on 2 splorgons of land.",
+        price:"38,000 Zorpians"
+    },
+    {
+        packageName:"The Gatheron Up Package",
+        description: "This is a trip specific for reunions! Get your families together in this giant 10 bedroom home for a week on the planet of Vogsphere. Full stocked fridge!!!",
+        price: "78,000 Zorpians"
+    },
+    {
+        packageName:"The Dexterio Package",
+        description: "ROMANTIC GET AWAY FOR 2! Take this 2 night trip to Arda! 2 bedrooms, 1 bathroom You will sleep on a literal bed of roses! (Watch out for the thorns!) But it is as romantic as romance comes!",
+        price:"99,000 Zorpians"
+    },
+    {
+        packageName:"Desolation in the Void",
+        description: "Prepare to be transported to a forsaken world in the outer realms of space, where the remnants of war have left an indelible mark on the very fabric of existence. Introducing our unconventional vacation package, 'Desolation in the Void,' a grim expedition for those daring enough to confront the harsh reality of a planet torn asunder by ceaseless warfare.",
+        price:"25,000 Zorpians"
+    },
+    {
+        packageName:"The Plaquid Package",
+        description: "Trip for 2 all the way to and from Decapod 10! Get the real Decapodian experience with all you can eat fish and chess peices!",
+        price:"10,000 Zorpians" 
+    },
+    {
+        packageName:"The Quintonias Package",
+        description: "Trip to and from Dagoban for 2. Go visit this beautiful swamp-covered planet and gain some extra wisdom!",
+        price:"5,000 Zorpians"
+    },
+    {
+        packageName:"The Aebos Package",
+        description: "Travel to the remanence of the planet Shlorp. See what was once a perfect utopia but is unfortunatley no more! Full tour!",
+        price: "500 Zorpians"
+    },
+    {
+        packageName: "The Planetaira Package",
+        description: "A trip for 2 adults and 2 children. You will spend 3 nights on Naboo. then you will be taken to a 2 night stay in a beautiful castle on Ego! This price includes your trip to and from home! (meals not included.)",
+        price: "1,000,000 Zorpians"
+    }
+]
+
