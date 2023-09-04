@@ -1,16 +1,17 @@
 header {
 	height: 200px;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 }
 
 .scaledLogo {
 	position: relative;
-	width: 60%;
+	width: 70%;
+	margin-top: 30px;
 	object-fit: scale-down;
 	z-index: 1;
-	display: flex;
-	justify-content: center;
+	/* display: flex; */
+	/* justify-content: center; */
 	align-items: center;
 	/* left: auto;
 	right: auto; */
