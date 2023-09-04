@@ -20,6 +20,7 @@ const Homes = ({homes}) => {
                 <li class="list-group-item">{homes.bathrooms}</li>
                 <li class="list-group-item">{homes.splorgons}</li>
                 <li class="list-group-item">{homes.price}</li>
+                <li class="list-group-item">{homes.listed}</li>
             </ul>
         </div>
         </div>

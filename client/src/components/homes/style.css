@@ -1,7 +1,7 @@
-.card {
+.card, .card-body {
     margin: 0 auto;
     width: 30rem;
-    max-height:max-content;
+    /* max-height: 30rem; */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
