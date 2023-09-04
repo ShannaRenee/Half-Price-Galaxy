@@ -4,20 +4,23 @@ import headerImg from './headerImg.jpg';
 import logoImg from './halfpricegalaxylogo.png';
 import './style.css';
 
-const Header = ({ pages, currentPage, setCurrentPage }) => {
-	return (
-		<header className="container-fluid">
-			<img className="junkityjunk" src={headerImg} alt="space"/>
-			<div className="container d-flex justify-content-lg-between py-3">
-				<img className='scaledLogo' src={logoImg} alt="logo"/>
-				<Nav
-					pages={pages}
-					currentPage={currentPage}
-					setCurrentPage={setCurrentPage}
-				/>
-			</div>
-		</header>
-	);
+const Header = ({ pages, currentPage, setCurrentPage, navnames }) => {
+  return (
+    <header className="container-fluid">
+      <div className="container text-center py-3">
+        <a href='/' className='text-center'>
+          <img className='scaledLogo' src={logoImg} alt="logo" />
+        </a>
+      <Nav
+        pages={pages}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        navnames={navnames}
+      />
+      </div>
+      <img className="junkityjunk" src={headerImg} alt="space" />
+    </header>
+  );
 };
 
 export default Header;
