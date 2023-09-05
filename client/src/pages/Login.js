@@ -76,12 +76,22 @@ const Login = () => {
             <label htmlFor="floatingPassword"></label>
           </div>
 
+          <div className="form-check text-start my-3 pb-5">
+            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            <label className="form-check-label" htmlFor="flexCheckDefault">
+              <span>
+                <img src={require(`../components/login/imgs/tandc.png`)}alt="By clicking here you agree to All terms and conditions"   />
+              </span>
+            </label>
+          </div>
+
           <button className="btn btn-danger w-25 py-2" type="submit" disabled={loading}>
             {loading ? 'Signing In...' : 'Sign In'}
           </button>
           <p className="mt-5 mb-3 text-body-secondary">&copy; 99845sR-122354sR</p>
           {error && <p className="text-danger">Lifeform not found or an error occurred.</p>}
         </form>
+        
       </div>
     </div>
   );
