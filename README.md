@@ -6,7 +6,7 @@
   <h3 align="center">LINK TO DEPLOYED APPLICATION: <h3>
 </p>
 
-<h1 align="center"> 🚧 WORK IN PROGRESS!!! 🚧 </h1>
+<h1 align="center"> [live dployment link](https://half-price-galaxy-5da8f385ff20.herokuapp.com/) </h1>
 
 # Table of Contents
 
