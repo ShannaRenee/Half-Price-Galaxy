@@ -15,7 +15,7 @@ const HomePage = ({homePages}) => {
                 <p className="card-text">{homePages.description}</p>
             </div>
         </div>
-        </a>
+        
             );
 };
 export default HomePage;
