@@ -14,8 +14,8 @@ const travelSchema = new Schema({
     type: String,
     required: true,
     },
-  categories: {
-    type: Schema.Types.ObjectId,
+  categories_id: {
+    type: Schema.Types.String,
     ref: 'categories',
   }
 });

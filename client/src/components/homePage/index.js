@@ -3,7 +3,7 @@ import "./style.css";
 const HomePage = ({homePages}) => {
     console.log(homePages);
     return (
-        <div class="card">
+        <div class="card bg-dark">
             <img
             src={require(`../../../assets/imgs/${homePages.name}.jpg`)}
             class="card-img-top"
