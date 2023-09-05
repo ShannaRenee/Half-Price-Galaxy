@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_LIFEFORM } from '../utils/queries'; 
+import '../components/login/loginStyle.css';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -42,14 +43,14 @@ const Login = () => {
   };
 
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center vh-100 bg-darker">
+    <div className="cardlogin  -flex flex-column align-items-center justify-content-center vh-100 bg-dark">
       <div className="dropdown mb-3 me-3 bd-mode-toggle">
       </div>
 
       <div className="form-signin">
         <form className="w-100" onSubmit={handleFormSubmit}>
           <img className="mb-4" src={require(`../components/login/imgs/wA.png`)} alt="Aliens Welcome"  />
-          <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+          <h1 className="h3 mb-3 fw-normal text-light">Please sign in</h1>
 
           <div className="form-floating">
             <input
@@ -80,7 +81,7 @@ const Login = () => {
             <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
             <label className="form-check-label" htmlFor="flexCheckDefault">
               <span>
-                <img src={require(`../components/login/imgs/tandc.png`)}alt="By clicking here you agree to All terms and conditions"   />
+                <img src={require(`../components/login/imgs/tandc2.png`)}alt="By clicking here you agree to All terms and conditions"   />
               </span>
             </label>
           </div>
@@ -88,8 +89,8 @@ const Login = () => {
           <button className="btn btn-danger w-25 py-2" type="submit" disabled={loading}>
             {loading ? 'Signing In...' : 'Sign In'}
           </button>
-          <p className="mt-5 mb-3 text-body-secondary">&copy; 99845sR-122354sR</p>
-          {error && <p className="text-danger">Lifeform not found or an error occurred.</p>}
+          <p className="mt-5 mb-3 text-light fs-6">&copy; 99845sR-122354sR</p>
+          {error && <p className="text-light">Lifeform not found or an error occurred.</p>}
         </form>
         
       </div>
