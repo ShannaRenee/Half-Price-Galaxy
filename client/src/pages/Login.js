@@ -81,7 +81,7 @@ const Login = () => {
             <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
             <label className="form-check-label" htmlFor="flexCheckDefault">
               <span>
-                <img src={require(`../components/login/imgs/tandc.png`)}alt="By clicking here you agree to All terms and conditions"   />
+                <img src={require(`../components/login/imgs/tandc2.png`)}alt="By clicking here you agree to All terms and conditions"   />
               </span>
             </label>
           </div>
