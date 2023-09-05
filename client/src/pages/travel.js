@@ -1,7 +1,7 @@
 import React from 'react';
 import {locations} from "../data"
 import Locations from "../components/locations";
-console.log('locations', locations)
+
 const Travel = () => {
     return (
         <div>
