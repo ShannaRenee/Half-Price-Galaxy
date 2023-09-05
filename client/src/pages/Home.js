@@ -4,12 +4,12 @@ import HomePage from '../components/homePage/';
 const Home = () => {
   console.log(homePages);
   return (
-    <div className="card bg-black card-rounded w-75">
-      <div className="card-header bg-dark text-center">
+    <div className="card bg-black card-rounded w-50">
+      <div className="card-header bg-dark text-center text-white">
         <h1>👽 Welcome to Half Price Galaxy </h1>
-        <button className="btn btn-small btn-danger">Login</button>
+        <a button className="btn btn-small btn-danger" href="./Login">Login</a>
       </div>
-      <div className="card-body d-flex col">
+      <div className="card-body d-flex col ">
         {homePages.map((homePage) => (
           <HomePage key={homePage.name} homePages={homePage} />
         ))}
