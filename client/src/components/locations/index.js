@@ -2,7 +2,6 @@ import React from 'react';
 import "./style.css";
 
 const Locations = ({location}) => {
-    console.log('location', location)
     console.log('images', require(`../../../assets/imgs/${location.packageName}.jpg`))
     return (
         <div class="card">

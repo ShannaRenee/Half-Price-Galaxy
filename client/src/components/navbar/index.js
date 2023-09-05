@@ -4,7 +4,7 @@ import './style.css';
 const Nav = ({ pages, currentPage, setCurrentPage, navnames }) => {
   return (
     <nav className="nav d-flex justify-content-between align-items-center mt-4">
-      {pages.map((page, index) => {
+      {pages.map((page) => {
         // Convert the page name to lowercase for consistent matching
         const lowercasePage = page.toLowerCase();
 
