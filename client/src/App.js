@@ -38,8 +38,8 @@ function App() {
                 element={<Login />}
               />
               <Route
-                path="/matchup/:id"
-                element={<Vote />}
+                // path="/matchup/:id"
+                // element={<Vote />}
               />
               <Route
                 path="*"
