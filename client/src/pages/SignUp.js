@@ -16,6 +16,10 @@ const SignUp = () => {
 
   const { loading, error, data } = useQuery(QUERY_LIFEFORM, {
     variables: {
+      userName: formData.userName,
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      homePlanet: formData.homePlanet,
       email: formData.email,
       password: formData.password,
     },
@@ -41,10 +45,15 @@ const SignUp = () => {
       console.error(`Error creating a new life form: ${err}`);
     }
 
+<<<<<<< HEAD
     setFormData({
       first_name: '',
       last_name: '',
       home_planet: '',
+=======
+    // Clear the form fields
+    setFormData({      
+>>>>>>> main
       email: '',
       password: '',
     });
@@ -66,8 +75,13 @@ const SignUp = () => {
               className="form-control"
               id="floatingInputUserName"
               placeholder="User Name"
+<<<<<<< HEAD
               name="user name"
               value={formData['user name']}
+=======
+              name="userName"
+              value={formData.userName}
+>>>>>>> main
               onChange={handleInputChange}
             />
             <label htmlFor="floatingInputUserName">User Name</label>
@@ -79,8 +93,13 @@ const SignUp = () => {
               className="form-control"
               id="floatingInputFirstName"
               placeholder="First Name"
+<<<<<<< HEAD
               name="first name"
               value={formData['first name']}
+=======
+              name="firstName"
+              value={formData.firstName}
+>>>>>>> main
               onChange={handleInputChange}
             />
             <label htmlFor="floatingInputFirstName">First Name</label>
@@ -92,8 +111,13 @@ const SignUp = () => {
               className="form-control"
               id="floatingInputLastName"
               placeholder="Last Name"
+<<<<<<< HEAD
               name="last name"
               value={formData['last name']}
+=======
+              name="lastName"
+              value={formData.lastName}
+>>>>>>> main
               onChange={handleInputChange}
             />
             <label htmlFor="floatingInputLastName">Last Name</label>
@@ -105,8 +129,13 @@ const SignUp = () => {
               className="form-control"
               id="floatingInputHomePlanet"
               placeholder="Home Planet"
+<<<<<<< HEAD
               name="home planet"
               value={formData['home planet']}
+=======
+              name="homePlanet"
+              value={formData.homePlanet}
+>>>>>>> main
               onChange={handleInputChange}
             />
             <label htmlFor="floatingInputHomePlanet">Home Planet</label>

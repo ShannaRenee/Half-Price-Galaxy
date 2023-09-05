@@ -65,7 +65,7 @@ export const homePages = [
     {
         name: "Market",
         description: 'Want some stuff look no further!',
-        url: "genmerch"
+        url: "market"
     },
     {
         name: "Real Estate",
@@ -123,6 +123,9 @@ export const locations = [
 ]
 
 export const navnames = [
+    {
+        navname: "marketnav.jpg",
+    },
     {
         navname: "realestatenav.jpg",
     },

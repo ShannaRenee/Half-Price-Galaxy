@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Nav = ({ pages, currentPage, setCurrentPage, navnames }) => {
+const Nav = ({ pages, currentPage, setCurrentPage }) => {
   return (
     <nav className="nav d-flex justify-content-between align-items-center mt-4">
       {pages.map((page) => {
@@ -15,7 +15,7 @@ const Nav = ({ pages, currentPage, setCurrentPage, navnames }) => {
               onClick={() => setCurrentPage(page)}
             >
               <img
-                src={require(`../../../assets/imgs/${lowercasePage}nav.jpg`)}
+                src={require(`../../assets/imgs/${lowercasePage}nav.jpg`)}
                 className="card-img-top"
                 alt={page}
               />

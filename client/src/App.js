@@ -15,7 +15,7 @@ const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
 });
-const pages = ['realEstate', 'travel', 'Login', 'signup'];
+const pages = ['market', 'realEstate', 'travel', 'Login', 'signup'];
 function App() {
   const [currentPage, setCurrentPage] = useState('realEstate');
   return (
@@ -59,7 +59,7 @@ function App() {
                 element={<SignUp />}  
               />
               <Route
-                path="/genmerch"
+                path="/market"
                 element={<GenMerch />}
               />
             </Routes>
