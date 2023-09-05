@@ -10,6 +10,7 @@ import Travel from './pages/travel';
 import Footer from './components/Footer';
 import SignUp from './pages/SignUp';
 import GenMerch from './pages/GenMerch';
+import Profile from './pages/profile';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -39,10 +40,6 @@ function App() {
                 element={<Login />}
               />
               <Route
-                // path="/matchup/:id"
-                // element={<Vote />}
-              />
-              <Route
                 path="*"
                 element={<NotFound />}
               />
@@ -62,6 +59,10 @@ function App() {
                 path="/market"
                 element={<GenMerch />}
               />
+              <Route
+                path="/profile"
+                element={<Profile />}
+              />              
             </Routes>
           </div>
         </Router>
