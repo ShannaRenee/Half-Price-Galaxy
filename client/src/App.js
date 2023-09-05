@@ -4,12 +4,12 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
 import RealEstate from './pages/realEstate';
 import Travel from './pages/travel';
 import Footer from './components/Footer';
 import SignUp from './pages/SignUp';
+import GenMerch from './pages/GenMerch';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -57,6 +57,10 @@ function App() {
               <Route
                 path="/signup"
                 element={<SignUp />}  
+              />
+              <Route
+                path="/genmerch"
+                element={<GenMerch />}
               />
             </Routes>
           </div>
