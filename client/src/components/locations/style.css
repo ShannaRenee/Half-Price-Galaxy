@@ -4,6 +4,15 @@
     color: var(--darker);
 }
 
+h2 {
+    text-align: center;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
 .home-info {
     opacity: 0;
     transition: all 0.5s ease-in-out;
