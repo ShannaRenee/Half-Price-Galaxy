@@ -4,17 +4,18 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
 import RealEstate from './pages/realEstate';
 import Travel from './pages/travel';
 import Footer from './components/Footer';
+import SignUp from './pages/SignUp';
+import GenMerch from './pages/GenMerch';
 
 const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
 });
-const pages = ['realEstate', 'travel', 'Login', 'signup'];
+const pages = ['market', 'realEstate', 'travel', 'Login', 'signup'];
 function App() {
   const [currentPage, setCurrentPage] = useState('realEstate');
   return (
@@ -52,6 +53,14 @@ function App() {
               <Route
                 path="/travel"
                 element={<Travel />}
+              />
+              <Route
+                path="/signup"
+                element={<SignUp />}  
+              />
+              <Route
+                path="/market"
+                element={<GenMerch />}
               />
             </Routes>
           </div>

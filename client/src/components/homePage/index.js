@@ -1,5 +1,6 @@
 import React from 'react';
 import "./style.css";
+
 const HomePage = ({homePages}) => {
     console.log(homePages);
     return (
@@ -14,6 +15,7 @@ const HomePage = ({homePages}) => {
                 <p className="card-text">{homePages.description}</p>
             </div>
         </div>
+        </a>
             );
 };
 export default HomePage;

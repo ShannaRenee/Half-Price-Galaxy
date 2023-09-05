@@ -64,15 +64,18 @@ export const homes = [
 export const homePages = [
     {
         name: "Market",
-        description: 'Want some stuff look no further!'
+        description: 'Want some stuff look no further!',
+        url: "genmerch"
     },
     {
         name: "Real Estate",
-        description: 'Finally ready to find your dream home?'
+        description: 'Finally ready to find your dream home?',
+        url: "realEstate"
     },
     {
         name: "Travel",
-        description: 'Want to get out off your dusty old planet?'
+        description: 'Want to get out off your dusty old planet?',
+        url: "travel"
     }
 ];
 
@@ -121,6 +124,9 @@ export const locations = [
 
 export const navnames = [
     {
+        navname: "marketnav.jpg",
+    },
+    {
         navname: "realestatenav.jpg",
     },
     {
@@ -134,3 +140,75 @@ export const navnames = [
     }
 ]
 
+export const merch = [
+    {
+        name: "Crocs",
+        type: "shoes",
+        description: "These shoes are the future of all shoes. Every lifeform needs this cushion on their feet.  They are the most comfortable shoes in the galaxy.  They are made from the finest materials in the galaxy.  They are made from the skin of the most dangerous animal in the galaxy.  The Croc.",
+        planet: "Shipping From: Gorgania",
+        seller: "Limb Locker",
+        price: "50 Zorpians"
+    },
+    {
+        name: "The Klorpian Mark 3",
+        type: "Weapon",
+        description: "Space gun with all the bells and whistles to keep your home safe from other life forms!",
+        planet: "Shipping From: Melmac",
+        seller: "LockHead Martian",
+        price: "5,000 Zorpians"
+    },
+    {
+        name: "Splognoir",
+        type: "Vehicle",
+        description: "Fastest spaceship there is!!!!! Get from Abdoornia to Tolotunor in minutes!",
+        planet: "Shipping From: Abdoornia",
+        seller: "Dodging Meteors",
+        price: "3,000,000 Zorpians"
+    },
+    {
+        name: "Globaria",
+        type: "Kitchen Appliance",
+        description: "Cook with the globaria. It will give your food much more flavor!",
+        planet: "Shipping From: Naboo",
+        seller: "Amazonia",
+        price: "30 Zorpians"
+    },
+    {
+        name: "Stow Away Flork",
+        type: "Bedroom Furniture",
+        description: "This will help to hide your flork so no one has to see it when they come over! It is so good that you can't even see the flork in the photo!",
+        planet: "Shipping From: Decapod 10",
+        seller: "Targeeeeeeet",
+        price: "350 Zorpians"
+    },
+    {
+        name: "Cothorix",
+        type: "Cleaning Supplies",
+        description: "Have replican lifeforms that bring in germs? You can keep your home cleaner than ever before by disinfecting with Cothorix.",
+        planet: "Shipping From: Mars",
+        seller: "Mars-Mart",
+        price: "12 Zorpians"
+    },
+    {
+        name: "Igolla Q9",
+        type: "Technology",
+        description: "Never drop a call to Jupiter again using our new and advanced technology with the Igolla Q9!",
+        planet: "Shipping From: Ando",
+        seller: "Galaxy Wireless",
+        price: "5,000 Zorpians"
+    },
+    {
+        name: "Zigowaapa",
+        type: "Clothing",
+        description: "Keep warm on any planet with the Zigowaapa jacket that uses insolation straight from the stars!",
+        seller: "Goredertex",
+        price: "500 Zorpians"
+    },
+    {
+        name: "Storplox",
+        type: "Food",
+        description: "This is the food of all food. You only have to eat one meal a day and you will be full for the rest of the day.  It is the most nutritious food in the galaxy.  It is made from the finest ingredients in the galaxy.  It is made from the skin of the rarest plant in the galaxy.  The Storplox.",
+        seller: "Rordon Zamsay",
+        price: "300 Zorpians"
+    }
+];
