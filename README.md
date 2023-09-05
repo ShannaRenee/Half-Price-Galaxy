@@ -1,4 +1,4 @@
-![HALF PRICE GALAXY!](/client/assets/imgs/halfpricegalaxylogo.png)
+![HALF PRICE GALAXY!](/client/src/assets/imgs/halfpricegalaxylogo.png)
 
 <p align="center">
   <img src="./client/src/assets/imgs/traversetheuniverse.gif" />
