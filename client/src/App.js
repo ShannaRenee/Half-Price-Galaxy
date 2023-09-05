@@ -31,11 +31,11 @@ function App() {
           <div className="flex-column justify-center align-center min-100-vh bg-primary">
             <Routes>
               <Route
-                path=""
+                path="/"
                 element={<Home />}
               />
               <Route
-                path="login"
+                path="/login"
                 element={<Login />}
               />
               <Route
@@ -47,19 +47,19 @@ function App() {
                 element={<NotFound />}
               />
               <Route
-                path="realEstate"
+                path="/realEstate"
                 element={<RealEstate />}
               />
               <Route
-                path="travel"
+                path="/travel"
                 element={<Travel />}
               />
               <Route
-                path="signup"
+                path="/signup"
                 element={<SignUp />}  
               />
               <Route
-                path="market"
+                path="/market"
                 element={<GenMerch />}
               />
             </Routes>

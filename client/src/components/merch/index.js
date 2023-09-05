@@ -6,7 +6,7 @@ const Merch = ({merch}) => {
         <div className="col">
             <div class="card h-100">
             <img 
-            src={require(`../../assets/imgs/${merch.name}.jpg`)} 
+            src={require(`../assets/imgs/${merch.name}.jpg`)} 
             class="card-img-top" 
             alt={merch.name}
             />

@@ -5,7 +5,7 @@ const Locations = ({location}) => {
     return (
         <div class="card">
             <img 
-            src={require(`../../assets/imgs/${location.packageName}.jpg`)} 
+            src={require(`../assets/imgs/${location.packageName}.jpg`)} 
             class="card-img-top" 
             alt={location.packageName}
             />

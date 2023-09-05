@@ -15,7 +15,7 @@ const Nav = ({ pages, currentPage, setCurrentPage }) => {
               onClick={() => setCurrentPage(page)}
             >
               <img
-                src={require(`../../assets/imgs/${lowercasePage}nav.jpg`)}
+                src={require(`../assets/imgs/${lowercasePage}nav.jpg`)}
                 className="card-img-top"
                 alt={page}
               />
