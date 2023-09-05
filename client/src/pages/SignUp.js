@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import { QUERY_LIFEFORM } from '../utils/queries'; 
+import { useQuery, useMutation } from '@apollo/client';
+import {ADD_LIFEFORM } from '../utils/mutations';
+import { QUERY_LIFEFORM } from '../utils/queries';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
+    first_name: '',
+    last_name: '',
+    home_planet: '',
     email: '',
     password: '',
   });
@@ -17,25 +21,30 @@ const SignUp = () => {
     },
   });
 
+  const [addLifeForm] = useMutation(ADD_LIFEFORM);
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // Check if data contains a user with the given email and password
-    if (!loading && !error && data && data.lifeForm) {
-      // User found, navigate to the dashboard or another page
+    try {
+      const { data } = await addLifeForm({
+        variables: { ...formData },
+      });
+
       navigate(`/`);
-    } else {
-      // User not found or error occurred
-      console.error('User not found or an error occurred.');
+    } catch (err) {
+      console.error(`Error creating a new life form: ${err}`);
     }
 
-    // Clear the form fields
     setFormData({
+      first_name: '',
+      last_name: '',
+      home_planet: '',
       email: '',
       password: '',
     });
@@ -55,78 +64,78 @@ const SignUp = () => {
             <input
               type="text"
               className="form-control"
-              id="floatingInput"
+              id="floatingInputUserName"
               placeholder="User Name"
               name="user name"
-              value={formData.name}
+              value={formData['user name']}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInput"></label>
+            <label htmlFor="floatingInputUserName">User Name</label>
           </div>
 
           <div className="form-floating">
             <input
               type="text"
               className="form-control"
-              id="floatingInput"
+              id="floatingInputFirstName"
               placeholder="First Name"
               name="first name"
-              value={formData.name}
+              value={formData['first name']}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInput"></label>
+            <label htmlFor="floatingInputFirstName">First Name</label>
           </div>
 
           <div className="form-floating">
             <input
               type="text"
               className="form-control"
-              id="floatingInput"
+              id="floatingInputLastName"
               placeholder="Last Name"
               name="last name"
-              value={formData.name}
+              value={formData['last name']}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInput"></label>
+            <label htmlFor="floatingInputLastName">Last Name</label>
           </div>
 
           <div className="form-floating">
             <input
               type="text"
               className="form-control"
-              id="floatingInput"
+              id="floatingInputHomePlanet"
               placeholder="Home Planet"
               name="home planet"
-              value={formData.name}
+              value={formData['home planet']}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInput"></label>
+            <label htmlFor="floatingInputHomePlanet">Home Planet</label>
           </div>
-
 
           <div className="form-floating">
             <input
               type="email"
               className="form-control"
-              id="floatingInput"
+              id="floatingInputEmail"
               placeholder="Email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInput"></label>
+            <label htmlFor="floatingInputEmail">Email</label>
           </div>
+
           <div className="form-floating">
             <input
               type="password"
               className="form-control"
-              id="floatingPassword"
+              id="floatingInputPassword"
               placeholder="Password"
               name="password"
               value={formData.password}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingPassword"></label>
+            <label htmlFor="floatingInputPassword">Password</label>
           </div>
 
           <div className="form-check text-start my-3 pb-5">
@@ -139,12 +148,12 @@ const SignUp = () => {
           </div>
 
           <button className="btn btn-danger w-25 py-2" type="submit" disabled={loading}>
-            {loading ? 'Signing In...' : 'Sign Up'}
+            {loading ? 'Signing Up...' : 'Sign Up'}
           </button>
+
           <p className="mt-5 mb-3 text-body-secondary">&copy; 99845sR-122354sR</p>
           {error && <p className="text-danger">Lifeform not found or an error occurred.</p>}
         </form>
-        
       </div>
     </div>
   );
