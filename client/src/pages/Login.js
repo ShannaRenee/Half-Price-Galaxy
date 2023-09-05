@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { QUERY_LIFEFORM } from '../utils/queries'; // Assuming you have a QUERY_LIFEFORM query
+import { QUERY_LIFEFORM } from '../utils/queries'; 
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -61,7 +61,7 @@ const Login = () => {
               value={formData.email}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInput">Email</label>
+            <label htmlFor="floatingInput"></label>
           </div>
           <div className="form-floating">
             <input
@@ -73,7 +73,7 @@ const Login = () => {
               value={formData.password}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingPassword">Password</label>
+            <label htmlFor="floatingPassword"></label>
           </div>
 
           <button className="btn btn-danger w-25 py-2" type="submit" disabled={loading}>
