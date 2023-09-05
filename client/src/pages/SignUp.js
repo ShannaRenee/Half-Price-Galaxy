@@ -1,83 +1,151 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useMutation, useQuery } from '@apollo/client';
-import { QUERY_TECH } from '../utils/queries';
-import { CREATE_MATCHUP } from '../utils/mutations';
+import { useQuery } from '@apollo/client';
+import { QUERY_LIFEFORM } from '../utils/queries'; 
 
 const SignUp = () => {
-  const { loading, data } = useQuery(QUERY_TECH);
-
-  const techList = data?.tech || [];
-
   const [formData, setFormData] = useState({
-    tech1: 'JavaScript',
-    tech2: 'JavaScript',
+    email: '',
+    password: '',
   });
   let navigate = useNavigate();
 
-  const [createMatchup, { error }] = useMutation(CREATE_MATCHUP);
+  const { loading, error, data } = useQuery(QUERY_LIFEFORM, {
+    variables: {
+      email: formData.email,
+      password: formData.password,
+    },
+  });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleFormSubmit = async (event) => {
+  const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    try {
-      const { data } = await createMatchup({
-        variables: { ...formData },
-      });
-
-      navigate(`/matchup/${data.createMatchup._id}`);
-    } catch (err) {
-      console.error(err);
+    // Check if data contains a user with the given email and password
+    if (!loading && !error && data && data.lifeForm) {
+      // User found, navigate to the dashboard or another page
+      navigate(`/`);
+    } else {
+      // User not found or error occurred
+      console.error('User not found or an error occurred.');
     }
 
+    // Clear the form fields
     setFormData({
-      tech1: 'JavaScript',
-      tech2: 'JavaScript',
+      email: '',
+      password: '',
     });
   };
 
   return (
-    <div className="card bg-white card-rounded w-25">
-      <div className="card-header bg-dark text-center">
-        <h1>Let's create a matchup!</h1>
+    <div className="d-flex flex-column align-items-center justify-content-center vh-100 bg-darker">
+      <div className="dropdown mb-3 me-3 bd-mode-toggle">
       </div>
-      <div className="card-body m-5">
-        {loading ? (
-          <div>Loading...</div>
-        ) : (
-          <form onSubmit={handleFormSubmit}>
-            <label>Tech 1: </label>
-            <select name="tech1" onChange={handleInputChange}>
-              {techList.map((tech) => {
-                return (
-                  <option key={tech._id} value={tech.name}>
-                    {tech.name}
-                  </option>
-                );
-              })}
-            </select>
-            <label>Tech 2: </label>
-            <select name="tech2" onChange={handleInputChange}>
-              {techList.map((tech) => {
-                return (
-                  <option key={tech._id} value={tech.name}>
-                    {tech.name}
-                  </option>
-                );
-              })}
-            </select>
-            <button className="btn btn-danger" type="submit">
-              Create Matchup!
-            </button>
-          </form>
-        )}
+
+      <div className="form-signin">
+        <form className="w-100" onSubmit={handleFormSubmit}>
+          <img className="mb-4" src={require(`../components/login/imgs/wA.png`)} alt="Aliens Welcome"  />
+          <h1 className="h3 mb-3 fw-normal">Please sign up</h1>
+
+          <div className="form-floating">
+            <input
+              type="text"
+              className="form-control"
+              id="floatingInput"
+              placeholder="User Name"
+              name="user name"
+              value={formData.name}
+              onChange={handleInputChange}
+            />
+            <label htmlFor="floatingInput"></label>
+          </div>
+
+          <div className="form-floating">
+            <input
+              type="text"
+              className="form-control"
+              id="floatingInput"
+              placeholder="First Name"
+              name="first name"
+              value={formData.name}
+              onChange={handleInputChange}
+            />
+            <label htmlFor="floatingInput"></label>
+          </div>
+
+          <div className="form-floating">
+            <input
+              type="text"
+              className="form-control"
+              id="floatingInput"
+              placeholder="Last Name"
+              name="last name"
+              value={formData.name}
+              onChange={handleInputChange}
+            />
+            <label htmlFor="floatingInput"></label>
+          </div>
+
+          <div className="form-floating">
+            <input
+              type="text"
+              className="form-control"
+              id="floatingInput"
+              placeholder="Home Planet"
+              name="home planet"
+              value={formData.name}
+              onChange={handleInputChange}
+            />
+            <label htmlFor="floatingInput"></label>
+          </div>
+
+
+          <div className="form-floating">
+            <input
+              type="email"
+              className="form-control"
+              id="floatingInput"
+              placeholder="Email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+            />
+            <label htmlFor="floatingInput"></label>
+          </div>
+          <div className="form-floating">
+            <input
+              type="password"
+              className="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+              name="password"
+              value={formData.password}
+              onChange={handleInputChange}
+            />
+            <label htmlFor="floatingPassword"></label>
+          </div>
+
+          <div className="form-check text-start my-3 pb-5">
+            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            <label className="form-check-label" htmlFor="flexCheckDefault">
+              <span>
+                <img src={require(`../components/login/imgs/tandc.png`)}alt="By clicking here you agree to All terms and conditions"   />
+              </span>
+            </label>
+          </div>
+
+          <button className="btn btn-danger w-25 py-2" type="submit" disabled={loading}>
+            {loading ? 'Signing In...' : 'Sign Up'}
+          </button>
+          <p className="mt-5 mb-3 text-body-secondary">&copy; 99845sR-122354sR</p>
+          {error && <p className="text-danger">Lifeform not found or an error occurred.</p>}
+        </form>
+        
       </div>
-      {error && <div>Something went wrong...</div>}
     </div>
   );
 };

@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound';
 import RealEstate from './pages/realEstate';
 import Travel from './pages/travel';
 import Footer from './components/Footer';
+import SignUp from './pages/SignUp';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -52,6 +53,10 @@ function App() {
               <Route
                 path="/travel"
                 element={<Travel />}
+              />
+              <Route
+                path="/signup"
+                element={<SignUp />}  
               />
             </Routes>
           </div>

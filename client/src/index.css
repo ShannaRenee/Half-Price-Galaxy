@@ -446,6 +446,7 @@ a:hover {
 /* HEIGHT / WIDTH UTILS */
 .w-100 {
   width: 100%;
+  padding-bottom: 10rem;
 }
 
 .w-75 {
@@ -517,6 +518,7 @@ a:hover {
 
 .mb-4 {
   margin-bottom: 1.375rem;
+  padding-top: 15rem;
 }
 
 .mb-5 {
