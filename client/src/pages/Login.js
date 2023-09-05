@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_LIFEFORM } from '../utils/queries'; 
-import '../components/login/style.css';
+import '../components/login/loginStyle.css';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +43,7 @@ const Login = () => {
   };
 
   return (
-    <div className="card w-50 -flex flex-column align-items-center justify-content-center vh-100 bg-dark">
+    <div className="cardlogin  -flex flex-column align-items-center justify-content-center vh-100 bg-dark">
       <div className="dropdown mb-3 me-3 bd-mode-toggle">
       </div>
 
