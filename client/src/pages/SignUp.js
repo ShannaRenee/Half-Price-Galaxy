@@ -1,45 +1,42 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import { QUERY_LIFEFORM } from '../utils/queries'; 
+import { useMutation } from '@apollo/client';
+import { ADD_LIFEFORM } from '../utils/mutations';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    homePlanet: '',
     email: '',
     password: '',
   });
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const { loading, error, data } = useQuery(QUERY_LIFEFORM, {
-    variables: {
-      userName: formData.userName,
-      firstName: formData.firstName,
-      lastName: formData.lastName,
-      homePlanet: formData.homePlanet,
-      email: formData.email,
-      password: formData.password,
-    },
-  });
+  const [addLifeForm, { loading, error }] = useMutation(ADD_LIFEFORM);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // Check if data contains a user with the given email and password
-    if (!loading && !error && data && data.lifeForm) {
-      // User found, navigate to the dashboard or another page
+    try {
+      const { data } = await addLifeForm({
+        variables: { ...formData },
+      });
+
       navigate(`/`);
-    } else {
-      // User not found or error occurred
-      console.error('User not found or an error occurred.');
+    } catch (err) {
+      console.error(`Error creating a new life form: ${err.message}`);
     }
 
-    // Clear the form fields
-    setFormData({      
+    setFormData({
+      firstName: '',
+      lastName: '',
+      homePlanet: '',
       email: '',
       password: '',
     });
@@ -52,103 +49,91 @@ const SignUp = () => {
 
       <div className="form-signin">
         <form className="w-100" onSubmit={handleFormSubmit}>
-          <img className="mb-4" src={require(`../components/login/imgs/wA.png`)} alt="Aliens Welcome"  />
+          <img className="mb-4" src={require(`../components/login/imgs/wA.png`)} alt="Aliens Welcome" />
           <h1 className="h3 mb-3 fw-normal">Please sign up</h1>
 
           <div className="form-floating">
             <input
               type="text"
               className="form-control"
-              id="floatingInput"
-              placeholder="User Name"
-              name="userName"
-              value={formData.userName}
-              onChange={handleInputChange}
-            />
-            <label htmlFor="floatingInput"></label>
-          </div>
-
-          <div className="form-floating">
-            <input
-              type="text"
-              className="form-control"
-              id="floatingInput"
+              id="floatingInputFirstName"
               placeholder="First Name"
               name="firstName"
               value={formData.firstName}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInput"></label>
+            <label htmlFor="floatingInputFirstName"></label>
           </div>
 
           <div className="form-floating">
             <input
               type="text"
               className="form-control"
-              id="floatingInput"
+              id="floatingInputLastName"
               placeholder="Last Name"
               name="lastName"
               value={formData.lastName}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInput"></label>
+            <label htmlFor="floatingInputLastName"></label>
           </div>
 
           <div className="form-floating">
             <input
               type="text"
               className="form-control"
-              id="floatingInput"
+              id="floatingInputHomePlanet"
               placeholder="Home Planet"
               name="homePlanet"
               value={formData.homePlanet}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInput"></label>
+            <label htmlFor="floatingInputHomePlanet"></label>
           </div>
-
 
           <div className="form-floating">
             <input
               type="email"
               className="form-control"
-              id="floatingInput"
+              id="floatingInputEmail"
               placeholder="Email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInput"></label>
+            <label htmlFor="floatingInputEmail"></label>
           </div>
+
           <div className="form-floating">
             <input
               type="password"
               className="form-control"
-              id="floatingPassword"
+              id="floatingInputPassword"
               placeholder="Password"
               name="password"
               value={formData.password}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingPassword"></label>
+            <label htmlFor="floatingInputPassword"></label>
           </div>
 
           <div className="form-check text-start my-3 pb-5">
-            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            <input className="form-check-input" type="checkbox" id="flexCheckDefault" />
             <label className="form-check-label" htmlFor="flexCheckDefault">
               <span>
-                <img src={require(`../components/login/imgs/tandc.png`)}alt="By clicking here you agree to All terms and conditions"   />
+                <img src={require(`../components/login/imgs/tandc2.png`)} alt="By clicking here you agree to All terms and conditions" />
               </span>
             </label>
           </div>
 
+
           <button className="btn btn-danger w-25 py-2" type="submit" disabled={loading}>
-            {loading ? 'Signing In...' : 'Sign Up'}
+            {loading ? 'Signing Up...' : 'Sign Up'}
           </button>
+
           <p className="mt-5 mb-3 text-body-secondary">&copy; 99845sR-122354sR</p>
           {error && <p className="text-danger">Lifeform not found or an error occurred.</p>}
         </form>
-        
       </div>
     </div>
   );
