@@ -1,0 +1,16 @@
+.card, .card-body {
+    margin: 0 auto;
+    width: 30rem;
+    /* max-height: 30rem; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.info {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 20rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    flex-wrap: wrap;
+}
