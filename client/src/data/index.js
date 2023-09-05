@@ -124,6 +124,9 @@ export const locations = [
 
 export const navnames = [
     {
+        navname: "marketnav.jpg",
+    },
+    {
         navname: "realestatenav.jpg",
     },
     {

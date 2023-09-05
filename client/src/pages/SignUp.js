@@ -12,6 +12,10 @@ const SignUp = () => {
 
   const { loading, error, data } = useQuery(QUERY_LIFEFORM, {
     variables: {
+      userName: formData.userName,
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      homePlanet: formData.homePlanet,
       email: formData.email,
       password: formData.password,
     },
@@ -35,7 +39,7 @@ const SignUp = () => {
     }
 
     // Clear the form fields
-    setFormData({
+    setFormData({      
       email: '',
       password: '',
     });
@@ -57,8 +61,8 @@ const SignUp = () => {
               className="form-control"
               id="floatingInput"
               placeholder="User Name"
-              name="user name"
-              value={formData.name}
+              name="userName"
+              value={formData.userName}
               onChange={handleInputChange}
             />
             <label htmlFor="floatingInput"></label>
@@ -70,8 +74,8 @@ const SignUp = () => {
               className="form-control"
               id="floatingInput"
               placeholder="First Name"
-              name="first name"
-              value={formData.name}
+              name="firstName"
+              value={formData.firstName}
               onChange={handleInputChange}
             />
             <label htmlFor="floatingInput"></label>
@@ -83,8 +87,8 @@ const SignUp = () => {
               className="form-control"
               id="floatingInput"
               placeholder="Last Name"
-              name="last name"
-              value={formData.name}
+              name="lastName"
+              value={formData.lastName}
               onChange={handleInputChange}
             />
             <label htmlFor="floatingInput"></label>
@@ -96,8 +100,8 @@ const SignUp = () => {
               className="form-control"
               id="floatingInput"
               placeholder="Home Planet"
-              name="home planet"
-              value={formData.name}
+              name="homePlanet"
+              value={formData.homePlanet}
               onChange={handleInputChange}
             />
             <label htmlFor="floatingInput"></label>
