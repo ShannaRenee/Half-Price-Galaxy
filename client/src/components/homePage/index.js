@@ -7,7 +7,7 @@ const HomePage = ({homePages}) => {
         <a href={`/${homePages.url}`} key={homePages.url}>
         <div class="card bg-dark ">
             <img
-            src={require(`../../../assets/imgs/${homePages.name}.jpg`)}
+            src={require(`../../assets/imgs/${homePages.name}.jpg`)}
             class="card-img-top"
             alt={homePages.name}
             />
