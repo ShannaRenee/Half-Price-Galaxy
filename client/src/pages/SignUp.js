@@ -1,31 +1,19 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useQuery, useMutation } from '@apollo/client';
-import {ADD_LIFEFORM } from '../utils/mutations';
-import { QUERY_LIFEFORM } from '../utils/queries';
+import { useMutation } from '@apollo/client';
+import { ADD_LIFEFORM } from '../utils/mutations';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
-    first_name: '',
-    last_name: '',
-    home_planet: '',
+    firstName: '',
+    lastName: '',
+    homePlanet: '',
     email: '',
     password: '',
   });
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const { loading, error, data } = useQuery(QUERY_LIFEFORM, {
-    variables: {
-      userName: formData.userName,
-      firstName: formData.firstName,
-      lastName: formData.lastName,
-      homePlanet: formData.homePlanet,
-      email: formData.email,
-      password: formData.password,
-    },
-  });
-
-  const [addLifeForm] = useMutation(ADD_LIFEFORM);
+  const [addLifeForm, { loading, error }] = useMutation(ADD_LIFEFORM);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -42,18 +30,13 @@ const SignUp = () => {
 
       navigate(`/`);
     } catch (err) {
-      console.error(`Error creating a new life form: ${err}`);
+      console.error(`Error creating a new life form: ${err.message}`);
     }
 
-<<<<<<< HEAD
     setFormData({
-      first_name: '',
-      last_name: '',
-      home_planet: '',
-=======
-    // Clear the form fields
-    setFormData({      
->>>>>>> main
+      firstName: '',
+      lastName: '',
+      homePlanet: '',
       email: '',
       password: '',
     });
@@ -66,26 +49,8 @@ const SignUp = () => {
 
       <div className="form-signin">
         <form className="w-100" onSubmit={handleFormSubmit}>
-          <img className="mb-4" src={require(`../components/login/imgs/wA.png`)} alt="Aliens Welcome"  />
+          <img className="mb-4" src={require(`../components/login/imgs/wA.png`)} alt="Aliens Welcome" />
           <h1 className="h3 mb-3 fw-normal">Please sign up</h1>
-
-          <div className="form-floating">
-            <input
-              type="text"
-              className="form-control"
-              id="floatingInputUserName"
-              placeholder="User Name"
-<<<<<<< HEAD
-              name="user name"
-              value={formData['user name']}
-=======
-              name="userName"
-              value={formData.userName}
->>>>>>> main
-              onChange={handleInputChange}
-            />
-            <label htmlFor="floatingInputUserName">User Name</label>
-          </div>
 
           <div className="form-floating">
             <input
@@ -93,16 +58,11 @@ const SignUp = () => {
               className="form-control"
               id="floatingInputFirstName"
               placeholder="First Name"
-<<<<<<< HEAD
-              name="first name"
-              value={formData['first name']}
-=======
               name="firstName"
               value={formData.firstName}
->>>>>>> main
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInputFirstName">First Name</label>
+            <label htmlFor="floatingInputFirstName"></label>
           </div>
 
           <div className="form-floating">
@@ -111,16 +71,11 @@ const SignUp = () => {
               className="form-control"
               id="floatingInputLastName"
               placeholder="Last Name"
-<<<<<<< HEAD
-              name="last name"
-              value={formData['last name']}
-=======
               name="lastName"
               value={formData.lastName}
->>>>>>> main
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInputLastName">Last Name</label>
+            <label htmlFor="floatingInputLastName"></label>
           </div>
 
           <div className="form-floating">
@@ -129,16 +84,11 @@ const SignUp = () => {
               className="form-control"
               id="floatingInputHomePlanet"
               placeholder="Home Planet"
-<<<<<<< HEAD
-              name="home planet"
-              value={formData['home planet']}
-=======
               name="homePlanet"
               value={formData.homePlanet}
->>>>>>> main
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInputHomePlanet">Home Planet</label>
+            <label htmlFor="floatingInputHomePlanet"></label>
           </div>
 
           <div className="form-floating">
@@ -151,7 +101,7 @@ const SignUp = () => {
               value={formData.email}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInputEmail">Email</label>
+            <label htmlFor="floatingInputEmail"></label>
           </div>
 
           <div className="form-floating">
@@ -164,17 +114,18 @@ const SignUp = () => {
               value={formData.password}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInputPassword">Password</label>
+            <label htmlFor="floatingInputPassword"></label>
           </div>
 
           <div className="form-check text-start my-3 pb-5">
-            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            <input className="form-check-input" type="checkbox" id="flexCheckDefault" />
             <label className="form-check-label" htmlFor="flexCheckDefault">
               <span>
-                <img src={require(`../components/login/imgs/tandc.png`)}alt="By clicking here you agree to All terms and conditions"   />
+                <img src={require(`../components/login/imgs/tandc2.png`)} alt="By clicking here you agree to All terms and conditions" />
               </span>
             </label>
           </div>
+
 
           <button className="btn btn-danger w-25 py-2" type="submit" disabled={loading}>
             {loading ? 'Signing Up...' : 'Sign Up'}
