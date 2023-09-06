@@ -6,7 +6,7 @@
   <h3 align="center">LINK TO DEPLOYED APPLICATION: <h3>
 </p>
 
-<h1 align="center"> https://half-price-galaxy-5da8f385ff20.herokuapp.com/ </h1>
+<h1 align="center">https://half-price-galaxy-409660c8c0b6.herokuapp.com/</h1>
 
 # Table of Contents
 
