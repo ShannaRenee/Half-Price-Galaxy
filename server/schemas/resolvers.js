@@ -28,6 +28,36 @@ const resolvers = {
     addLifeForm: async (parent, { first_name, last_name, email, password, home_planet }) => {
       return await lifeForm.create({ first_name, last_name, email, password, home_planet });
     },
+    login: async (_, { email, password }) => {
+      try {
+        // Find a lifeForm with the provided email
+        const foundLifeForm = await lifeForm.findOne({ email });
+    
+        // If no lifeForm is found or the password is incorrect, return an error
+        if (!foundLifeForm || !(await foundLifeForm.isCorrectPassword(password))) {
+          return {
+            success: false,
+            message: 'Invalid email or password',
+            userId: null,
+          };
+        }
+    
+        // If the email and password match, return the userId
+        return {
+          success: true,
+          message: 'Login successful',
+          userId: foundLifeForm._id,
+        };
+      } catch (error) {
+        console.error('Error during login:', error); // Log the error for debugging
+        return {
+          success: false,
+          message: 'An error occurred during login',
+          userId: null,
+        };
+      }
+    },
+    
 
     // THESE ARE NICE TO HAVE BUT NOT NECESSARY FOR MVP - these will not be the focus in anyway!
     // addCategory: async (parent, { name }) => {

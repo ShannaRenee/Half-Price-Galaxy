@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import { QUERY_LIFEFORM } from '../utils/queries'; 
+import { useQuery, useMutation } from '@apollo/client';
+import { QUERY_LIFEFORM } from '../utils/queries';
+import { LIFEFORM_LOGIN } from '../utils/mutations'; // Import the login mutation
 import '../components/login/style.css';
 
 const Login = () => {
@@ -9,30 +10,53 @@ const Login = () => {
     email: '',
     password: '',
   });
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+  const { loading: queryLoading, error: queryError, data: queryData } = useQuery(
+    QUERY_LIFEFORM,
+    {
+      variables: {
+        email: formData.email,
+        password: formData.password,
+      },
+    }
+  );
 
-  const { loading, error, data } = useQuery(QUERY_LIFEFORM, {
-    variables: {
-      email: formData.email,
-      password: formData.password,
-    },
-  });
+  // Define the login mutation
+  const [login, { loading: mutationLoading, error: mutationError, data: mutationData }] = useMutation(
+    LIFEFORM_LOGIN
+  );
+
+  const handleSuccessfulLogin = (userId) => {
+    // Navigate to the profile page and pass the user ID as a route parameter
+    navigate(`/profile/${userId}`);
+  };
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // Check if data contains a user with the given email and password
-    if (!loading && !error && data && data.lifeForm) {
-      // User found, navigate to the dashboard or another page
-      navigate(`/`);
-    } else {
-      // User not found or error occurred
-      console.error('User not found or an error occurred.');
+    try {
+      // Call the login mutation
+      const { data } = await login({
+        variables: {
+          email: formData.email,
+          password: formData.password,
+        },
+      });
+
+      // Check if the login mutation was successful
+      if (data && data.login && data.login.userId) {
+        const userId = data.login.userId;
+        handleSuccessfulLogin(userId);
+      } else {
+        console.error('User not found or an error occurred.');
+      }
+    } catch (error) {
+      console.error('An error occurred during login:', error.message);
     }
 
     // Clear the form fields
@@ -86,11 +110,11 @@ const Login = () => {
             </label>
           </div>
 
-          <button className="btn btn-danger w-25 py-2" type="submit" disabled={loading}>
-            {loading ? 'Signing In...' : 'Sign In'}
+          <button className="btn btn-danger w-25 py-2" type="submit" disabled={mutationLoading}>
+            {mutationLoading ? 'Signing In...' : 'Sign In'}
           </button>
           <p className="mt-5 mb-3 text-light fs-6">&copy; 99845sR-122354sR</p>
-          {error && <p className="text-light">Lifeform not found or an error occurred.</p>}
+          {mutationError && <p className="text-light">Lifeform not found or an error occurred.</p>}
         </form>
         
       </div>

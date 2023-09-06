@@ -12,3 +12,11 @@ export const ADD_LIFEFORM = gql`
     }
   }
 `;
+
+export const LIFEFORM_LOGIN = gql`
+mutation Login($email: String!, $password: String!) {
+  login(email: $email, password: $password) {
+    userId
+  }
+}
+`;
