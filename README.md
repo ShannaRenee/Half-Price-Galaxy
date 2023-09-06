@@ -1,12 +1,12 @@
-![HALF PRICE GALAXY!](/client/assets/imgs/halfpricegalaxylogo.png)
+![HALF PRICE GALAXY!](/client/src/assets/imgs/halfpricegalaxylogo.png)
 
 <p align="center">
-  <img src="./client/assets/imgs/traversetheuniverse.gif" />
+  <img src="./client/src/assets/imgs/traversetheuniverse.gif" />
 
   <h3 align="center">LINK TO DEPLOYED APPLICATION: <h3>
 </p>
 
-<h1 align="center"> 🚧 WORK IN PROGRESS!!! 🚧 </h1>
+<h1 align="center"> https://half-price-galaxy-5da8f385ff20.herokuapp.com/ </h1>
 
 # Table of Contents
 
@@ -124,5 +124,5 @@ Your group will use everything you’ve learned throughout this course to create
 Here is an example screenshot of the Book Search Engine using GoogleBooks API!!
 
 <p align="center">
-  <img src="./client/assets/imgs/farscape.gif" />
+  <img src="./client/src/assets/imgs/farscape.gif" />
 </p>
