@@ -1,7 +1,6 @@
 const { gql } = require('apollo-server-express');
 
 
-// I think this is the general idea but feel free to tweak as needed
 const typeDefs = gql`
   type lifeForm {
     _id: ID
