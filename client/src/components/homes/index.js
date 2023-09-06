@@ -6,7 +6,7 @@ const Homes = ({homes}) => {
         <div className="col">
             <div class="card h-100">
             <img 
-            src={require(`../assets/imgs/${homes.name}.jpg`)} 
+            src={require(`../../assets/imgs/${homes.name}.jpg`)} 
             class="card-img-top" 
             alt={homes.name}
             />

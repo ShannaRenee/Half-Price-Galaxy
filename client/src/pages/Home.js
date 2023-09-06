@@ -1,6 +1,7 @@
 import React from 'react';
 import { homePages } from '../data';
 import HomePage from '../components/homePage/';
+
 const Home = () => {
   console.log(homePages);
   return (
