@@ -16,60 +16,40 @@ const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
 });
+
 const pages = ['market', 'realEstate', 'travel', 'Login', 'signup'];
+
 function App() {
   const [currentPage, setCurrentPage] = useState('realEstate');
+
   return (
-  <div className="wrapper">
-    <Header
-      pages={pages}
-      currentPage={currentPage}
-      setCurrentPage={setCurrentPage}
-    />
-    <main>
-      <ApolloProvider client={client}>
-        <Router>
-          <div className="flex-column justify-center align-center min-100-vh bg-primary">
-            <Routes>
-              <Route
-                path="/"
-                element={<Home />}
-              />
-              <Route
-                path="/login"
-                element={<Login />}
-              />
-              <Route
-                path="*"
-                element={<NotFound />}
-              />
-              <Route
-                path="/realEstate"
-                element={<RealEstate />}
-              />
-              <Route
-                path="/travel"
-                element={<Travel />}
-              />
-              <Route
-                path="/signup"
-                element={<SignUp />}  
-              />
-              <Route
-                path="/market"
-                element={<GenMerch />}
-              />
-              <Route
-                path="/profile"
-                element={<Profile />}
-              />              
-            </Routes>
-          </div>
-        </Router>
-      </ApolloProvider>
-    </main>
-    <Footer />
-  </div>
+    <div className="wrapper">
+      <Header
+        pages={pages}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
+      <main>
+        <ApolloProvider client={client}>
+          <Router>
+            <div className="flex-column justify-center align-center min-100-vh bg-primary">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="*" element={<NotFound />} />
+                <Route path="/realEstate" element={<RealEstate />} />
+                <Route path="/travel" element={<Travel />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/market" element={<GenMerch />} />
+                <Route path="/profile/:userId" element={<Profile />} />
+              </Routes>
+            </div>
+          </Router>
+        </ApolloProvider>
+      </main>
+      <Footer />
+    </div>
   );
 }
+
 export default App;

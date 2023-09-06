@@ -1,51 +1,47 @@
-import React, { useState } from 'react';
-import { useQuery } from '@apollo/client';
-import { useNavigate } from 'react-router-dom';
-import { QUERY_LIFEFORM } from '../utils/queries';
+import React from 'react';
+import { useParams } from 'react-router-dom';
 
 const Profile = () => {
-  return (
-    <main>
-        <div class="card-container">
-            <span class="pro">PRO</span>
-            <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-            <h3>Ricky Park</h3>
-            <h6>New York</h6>
-            <p>User interface designer and <br/> front-end developer</p>
-            <div class="buttons">
-                <button class="primary">
-                    Message
-                </button>
-                <button class="primary ghost">
-                    Following
-                </button>
-            </div>
-            <div class="skills">
-                <h6>Skills</h6>
-                <ul>
-                    <li>UI / UX</li>
-                    <li>Front End Development</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Node</li>
-                </ul>
-            </div>
-        </div>
+  // Use useParams to get the user's ID from the URL
+  const { userId } = useParams();
 
-        <footer>
-            <p>
-                Created with <i class="fa fa-heart"></i> by
-                <a target="_blank" href="https://florin-pop.com">Florin Pop</a>
-                - Read how I created this
-                <a target="_blank" href="https://florin-pop.com/blog/2019/04/profile-card-design">here</a>
-                - Design made by
-                <a target="_blank" href="https://dribbble.com/shots/6276930-Profile-Card-UI-Design">Ildiesign</a>
-            </p>
-        </footer>
-    </main>
+  // Fetch user data using userId and display it
+  // Replace this with actual user data retrieval
+  const userData = {
+    id: userId,
+    first_name: '',
+    last_name: '',
+    home_planet: '',
+    email: '',
+  };
+  
+  return (
+    <div className="d-flex flex-column align-items-center justify-content-center vh-100 bg-darker">
+      <div className="dropdown mb-3 me-3 bd-mode-toggle"></div>
+      <div className="form-signin">
+        <img
+          className="mb-4"
+          src={require(`../components/login/imgs/wA.png`)}
+          alt="Aliens Welcome"
+        />
+        <h1 className="h3 mb-3 fw-normal">User Profile</h1>
+        <div className="profile-info">
+          <p>
+            <strong>First Name:</strong> {userData.first_name}
+          </p>
+          <p>
+            <strong>Last Name:</strong> {userData.last_name}
+          </p>
+          <p>
+            <strong>Home Planet:</strong> {userData.home_planet}
+          </p>
+          <p>
+            <strong>Email:</strong> {userData.email}
+          </p>
+        </div>
+        <p className="mt-5 mb-3 text-body-secondary">&copy; 99845sR-122354sR</p>
+      </div>
+    </div>
   );
 };
-
 export default Profile;

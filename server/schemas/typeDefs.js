@@ -58,6 +58,14 @@ const typeDefs = gql`
 
   type Mutation {
     addLifeForm(first_name: String!, last_name: String!, email: String!, password: String!, home_planet: String!): lifeForm
+    login(email: String!, password: String!): LoginResponse!
+  }
+  
+  
+  type LoginResponse {
+    success: Boolean!
+    message: String
+    userId: ID
   }
 `;
 
